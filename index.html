@@ -11,11 +11,28 @@
 
 body {
 
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #3B4049;
+
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
   background-color: #3B4049;
+}
+
+@media only screen and (min-device-width: 480px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) {
+  body {
+    font-size: 14px;
+  }
 }
 
 .form{
@@ -41,8 +58,8 @@ body {
 
 .lid {
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 400px;
+  width: 600px;
   top: 0;
   left: 0;
   border-right: 300px solid transparent;
@@ -70,8 +87,8 @@ body {
 
 .envelope {
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 400px;
+  width: 600px;
   top: 0;
   left: 0;
   border-top: 200px solid transparent;
@@ -84,7 +101,7 @@ body {
 .letter {
   position: absolute;
   top: 0;
-  width: 98%;
+  width: 596px;
   height: 400px;
   background-color: white;
   border-radius: 15px;
@@ -95,11 +112,8 @@ body {
 
 }
 
-.letter p {
-  text-align: center;
-  font-size: 14px;
-  margin-top: 10px;
-  color: #3B4049;
+ p {
+
 }
 
 
@@ -130,6 +144,7 @@ body {
       <div class="lid two"></div>
       <div class="envelope"></div>
       <div class="letter">
+        <br />
         <p><b>KUTSU</b></p>
         <p>Tervetuloa väitöstilaisuuteen ja tilanteen niin salliessa karonkkaan!</p>
         <br />
