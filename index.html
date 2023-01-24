@@ -20,7 +20,7 @@ body {
 
 .form{
 	position: absolute;
-	top: 700px;
+	top: 600px;
 	z-index: 1;
 	
 }
@@ -31,6 +31,7 @@ body {
 .wrapper {
   height: 400px;
   width: 600px;
+  top: 200px;
   background-color: #3760C9;
   position: absolute;
   display: flex;
@@ -53,7 +54,7 @@ body {
 
 /* Lid when closed */
 .lid.one {
-  border-top: 200px solid #658ced;
+  border-top: 180px solid #658ced;
   transform: rotateX(0deg);
   z-index: 3;
   transition-delay: 0.75s;
@@ -84,11 +85,14 @@ body {
   position: absolute;
   top: 0;
   width: 98%;
-  height: 96%;
+  height: 400px;
   background-color: white;
   border-radius: 15px;
   z-index: 2;
   transition: 0.5s;
+  overflow-x: hidden;
+  overflow-y: auto;
+
 }
 
 .letter p {
@@ -97,6 +101,8 @@ body {
   margin-top: 10px;
   color: #3B4049;
 }
+
+
 
 .wrapper:hover .lid.one {
     transform: rotateX(90deg);
@@ -118,6 +124,7 @@ body {
 
 </head>
 <body>
+    
     <div class="wrapper">
       <div class="lid one"></div>
       <div class="lid two"></div>
@@ -125,14 +132,19 @@ body {
       <div class="letter">
         <p><b>KUTSU</b></p>
         <p>Tervetuloa väitöstilaisuuteen ja tilanteen niin salliessa karonkkaan!</p>
-        <p>Väitös pidetään LUT-yliopiston auditoriossa XXYY perjantaina 17.2 klo 12:00.</p>
+        <br />
+        <p>Väitös pidetään LUT-yliopiston auditoriossa 1318 perjantaina 17.2 klo 12:00.</p>
         <p>Karonkka järjestetään Skinnarilan saunalla (Skinnarilankatu 35) klo 18:00 alkaen.</p>
         <p>VP 5.2. mennessä (alla)</p>
-      </div>
+        <br />
+        <p><b>Tervetuloa!</b></p>
+
+
     </div>
 
     <div class="form">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJ-9nnuG8uu1iFwbEMpdBzgjNL69PMXr79bgtOQbmW7I57Hw/viewform?embedded=true" width="640" height="716" frameborder="0" marginheight="0" marginwidth="0">Ladataan…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJ-9nnuG8uu1iFwbEMpdBzgjNL69PMXr79bgtOQbmW7I57Hw/viewform?embedded=true" width="640" height="716" frameborder="0" marginheight="0" marginwidth="0">Ladataan…</iframe>
+      </div>
     <br /> <br /> <br /> <br />
 	</div>
 
