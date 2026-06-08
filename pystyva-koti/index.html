@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pystyvä koti 360° -oppimissimulaatio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="viewer" aria-label="360 asteen panoraamanäkymä"></canvas>
+
+    <header class="topbar">
+      <div>
+        <h1>Pystyvä koti 360° -oppimissimulaatio</h1>
+        <p id="sceneSubtitle">Ammatillisen harkinnan harjoitus</p>
+      </div>
+      <nav class="sceneControls" aria-label="Näkymän valinta">
+        <button id="prevScene" type="button" aria-label="Edellinen näkymä">‹</button>
+        <select id="sceneSelect" aria-label="Valitse näkymä"></select>
+        <button id="nextScene" type="button" aria-label="Seuraava näkymä">›</button>
+      </nav>
+    </header>
+
+    <button id="panelToggle" class="panelToggle" type="button" aria-expanded="true">Oppimispaneeli</button>
+
+    <aside id="lessonPanel" class="lessonPanel" aria-label="Oppimispaneeli">
+      <section id="introCard" class="card introCard">
+        <h2 id="sceneTitle">Tervetuloa</h2>
+        <p id="sceneIntro"></p>
+        <details open>
+          <summary>Näin käytät simulaatiota</summary>
+          <ul>
+            <li>Katsele ympärillesi vetämällä hiirellä tai pyyhkäisemällä.</li>
+            <li>Lähennä ja loitonna hiiren rullalla tai nipistyseleellä.</li>
+            <li>Avaa siniset oppimiskohteet napsauttamalla.</li>
+            <li>Etsi piilotettuja havainnointitehtäviä.</li>
+          </ul>
+        </details>
+        <div class="legend" aria-label="Selite">
+          <span><i class="dot blue"></i> Oppimiskohde</span>
+          <span><i class="dot amber"></i> Näytetty piilotehtävä</span>
+          <span><i class="dot green"></i> Löydetty tehtävä</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="taskHeader">
+          <h3>Etsi ja pohdi</h3>
+          <strong id="foundCounter">Löydetty 0/0</strong>
+        </div>
+        <ul id="taskList" class="taskList"></ul>
+        <div class="buttonRow">
+          <button id="resetScene" type="button">Nollaa näkymä</button>
+          <button id="revealRemaining" type="button">Näytä jäljellä olevat</button>
+        </div>
+      </section>
+
+      <section id="finalPanel" class="card finalPanel" hidden>
+        <h3>Loppupohdinta</h3>
+        <p>Olet suorittanut Pystyvä koti 360° -tutustumisen.</p>
+        <ol>
+          <li>Mitkä kolme teknologiaa tukisivat suoraan kotona asumisen omatoimisuutta?</li>
+          <li>Mitkä teknologiat edellyttäisivät eniten ammattilaisen ohjausta ennen käyttöä?</li>
+          <li>Mitkä teknologiat herättävät eettisiä, yksityisyyteen tai ihmisarvoon liittyviä kysymyksiä?</li>
+          <li>Mitkä teknologiat tukevat asiakasta, ja mitkä tukevat ensisijaisesti ammattilaisia tai läheisiä?</li>
+          <li>Miten arvioisit, parantaako valittu teknologia todella arkea?</li>
+        </ol>
+        <textarea id="reflectionText" placeholder="Kirjoita muistiinpanosi tähän ja kopioi ne oppimisalustalle."></textarea>
+        <button id="copyReflection" type="button">Kopioi pohdinta</button>
+      </section>
+    </aside>
+
+    <div id="hotspotLayer" aria-hidden="false"></div>
+
+    <dialog id="popup" class="popup">
+      <button id="closePopup" class="closePopup" type="button" aria-label="Sulje">×</button>
+      <p id="popupKicker" class="kicker"></p>
+      <h2 id="popupTitle"></h2>
+      <p id="popupText"></p>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="debugReadout" class="debugReadout" hidden></div>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

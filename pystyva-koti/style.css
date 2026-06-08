@@ -1,0 +1,66 @@
+:root {
+  --panel: rgba(12, 21, 32, .84);
+  --panel-strong: rgba(8, 14, 22, .94);
+  --text: #eef7ff;
+  --muted: #c7d7e6;
+  --blue: #36c5ff;
+  --amber: #ffbf3d;
+  --green: #42d77d;
+  --danger: #ff6b6b;
+  --shadow: 0 16px 50px rgba(0,0,0,.35);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+html, body, #app { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #05090e; color: var(--text); }
+button, select, textarea { font: inherit; }
+button, select { border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.1); color: var(--text); border-radius: 999px; padding: .65rem .9rem; cursor: pointer; }
+button:hover, select:hover, button:focus-visible, select:focus-visible { outline: 2px solid var(--blue); background: rgba(255,255,255,.17); }
+#viewer { position: fixed; inset: 0; width: 100%; height: 100%; display: block; cursor: grab; }
+#viewer:active { cursor: grabbing; }
+.topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 20; min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .75rem 1rem; background: linear-gradient(180deg, rgba(5,10,16,.9), rgba(5,10,16,.45)); backdrop-filter: blur(8px); }
+h1 { font-size: clamp(1rem, 2vw, 1.45rem); margin: 0; }
+.topbar p { margin: .15rem 0 0; color: var(--muted); font-size: .92rem; }
+.sceneControls { display: flex; align-items: center; gap: .5rem; }
+.sceneControls select { min-width: 190px; color: #07111a; background: rgba(255,255,255,.92); }
+.panelToggle { position: fixed; top: 86px; right: 1rem; z-index: 30; display: none; }
+.lessonPanel { position: fixed; z-index: 18; top: 92px; right: 1rem; bottom: 1rem; width: min(410px, calc(100vw - 2rem)); overflow: auto; padding-right: .25rem; }
+.card { background: var(--panel); border: 1px solid rgba(255,255,255,.15); border-radius: 18px; padding: 1rem; margin-bottom: .85rem; box-shadow: var(--shadow); backdrop-filter: blur(10px); }
+.card h2, .card h3 { margin: 0 0 .65rem; }
+.card p, .card li { color: var(--muted); line-height: 1.45; }
+details { margin: .7rem 0; }
+summary { cursor: pointer; font-weight: 700; }
+.legend { display: grid; gap: .35rem; font-size: .92rem; }
+.dot { display: inline-block; width: .9rem; height: .9rem; border-radius: 50%; margin-right: .4rem; vertical-align: -.12rem; }
+.blue { background: var(--blue); } .amber { background: var(--amber); } .green { background: var(--green); }
+.taskHeader { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.taskList { list-style: none; margin: .4rem 0 1rem; padding: 0; display: grid; gap: .45rem; }
+.taskList li { display: grid; grid-template-columns: 1.4rem 1fr; gap: .45rem; align-items: start; padding: .45rem; border-radius: 10px; background: rgba(255,255,255,.06); }
+.taskList li.found { color: var(--green); background: rgba(66,215,125,.14); }
+.buttonRow { display: flex; gap: .5rem; flex-wrap: wrap; }
+.finalPanel textarea { width: 100%; min-height: 110px; resize: vertical; border-radius: 12px; padding: .7rem; color: #07111a; }
+#hotspotLayer { position: fixed; inset: 0; pointer-events: none; z-index: 12; }
+.hotspot { position: absolute; transform: translate(-50%, -50%); pointer-events: auto; border: 0; display: grid; place-items: center; text-align: center; user-select: none; }
+.hotspot.visible { min-width: 44px; min-height: 44px; max-width: 155px; padding: .45rem .65rem; border-radius: 999px; background: rgba(54,197,255,.92); color: #031018; font-weight: 800; box-shadow: 0 0 0 4px rgba(54,197,255,.25), var(--shadow); }
+.hotspot.visible::before { content: "i"; display: inline-grid; place-items: center; width: 1.2rem; height: 1.2rem; margin-right: .25rem; border-radius: 50%; background: #031018; color: var(--blue); }
+.hotspot.hidden { opacity: .02; background: transparent; border: 2px solid transparent; border-radius: 16px; }
+.hotspot.hidden.revealed { opacity: 1; background: rgba(255,191,61,.12); border: 3px solid var(--amber); color: #1d1200; font-weight: 900; animation: pulse 1.6s infinite; }
+.hotspot.hidden.revealed::after { content: "Find this"; background: var(--amber); border-radius: 999px; padding: .3rem .55rem; }
+.hotspot.found { opacity: 1; background: rgba(66,215,125,.14); border: 3px solid var(--green); animation: none; }
+.hotspot.found::after { content: "✓ Found"; background: var(--green); color: #021108; border-radius: 999px; padding: .3rem .55rem; font-weight: 900; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,191,61,.45); } 50% { box-shadow: 0 0 0 12px rgba(255,191,61,0); } }
+.popup { width: min(560px, calc(100vw - 2rem)); border: 1px solid rgba(255,255,255,.18); border-radius: 20px; background: var(--panel-strong); color: var(--text); box-shadow: var(--shadow); padding: 1.25rem; }
+.popup::backdrop { background: rgba(0,0,0,.48); }
+.closePopup { float: right; border-radius: 50%; width: 2.2rem; height: 2.2rem; padding: 0; }
+.kicker { color: var(--blue); text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; font-weight: 900; margin: 0 2.5rem .5rem 0; }
+#popupText { white-space: pre-line; color: var(--muted); line-height: 1.55; }
+.toast, .debugReadout { position: fixed; left: 1rem; bottom: 1rem; z-index: 40; background: var(--panel-strong); border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: .7rem 1rem; box-shadow: var(--shadow); }
+.debugReadout { bottom: 4rem; font-family: ui-monospace, Consolas, monospace; }
+.toast:empty { display: none; }
+@media (max-width: 800px) {
+  .topbar { align-items: flex-start; flex-direction: column; min-height: 120px; }
+  .sceneControls { width: 100%; }
+  .sceneControls select { flex: 1; min-width: 0; }
+  .panelToggle { display: block; top: 130px; }
+  .lessonPanel { top: 180px; transform: translateX(calc(100% + 2rem)); transition: transform .2s ease; }
+  .lessonPanel.open { transform: translateX(0); }
+}
