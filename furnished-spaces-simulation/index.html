@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Kohtaamo 3 – 360° reittisimulaatio</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip-link" href="#lesson-panel">Siirry tehtäviin</a>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Osio 2 · Reitit, rytmi ja tilannetaju</p>
+        <h1>Kohtaamo 3:n reittipäätös</h1>
+      </div>
+      <div class="scene-tools" aria-label="Näkymän valinta">
+        <label for="scene-select">Näkymä</label>
+        <select id="scene-select"></select>
+        <button id="previous-scene" type="button" aria-label="Edellinen näkymä">←</button>
+        <button id="next-scene" type="button" aria-label="Seuraava näkymä">→</button>
+      </div>
+    </header>
+
+    <main class="simulation-layout">
+      <section class="viewer-card" aria-labelledby="scene-title">
+        <div id="viewer" class="viewer" tabindex="0" role="application" aria-describedby="controls-help">
+          <div id="loading" class="loading">Ladataan 360-näkymää…</div>
+          <div id="hotspot-layer" class="hotspot-layer" aria-label="Panoraaman oppimiskohteet"></div>
+          <div id="debug-readout" class="debug-readout" hidden></div>
+        </div>
+        <p id="controls-help" class="sr-only">Vedä hiirellä tai pyyhkäise katsellaksesi ympärillesi. Nuolinäppäimet kääntävät näkymää. Plus- ja miinusnäppäimet sekä painikkeet muuttavat zoomausta.</p>
+        <div class="viewer-toolbar" aria-label="360-näkymän ohjaimet">
+          <button id="zoom-in" type="button">Lähennä</button>
+          <button id="zoom-out" type="button">Loitonna</button>
+          <button id="reset-view" type="button">Palauta aloitusnäkymä</button>
+          <button id="toggle-panel" type="button" aria-expanded="true" aria-controls="lesson-panel">Piilota tehtävät</button>
+        </div>
+      </section>
+
+      <aside id="lesson-panel" class="lesson-panel">
+        <p class="scene-kicker">Yksi näkymä · kolme etsintätehtävää</p>
+        <h2 id="scene-title"></h2>
+        <p id="scene-subtitle" class="subtitle"></p>
+        <p id="scene-introduction"></p>
+
+        <div class="progress-block" aria-live="polite">
+          <div><strong id="progress-text">Löydetty 0/3</strong></div>
+          <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+        </div>
+
+        <h3>Etsi ja pohdi</h3>
+        <ol id="task-list" class="task-list"></ol>
+        <div class="task-actions">
+          <button id="reveal-remaining" type="button">Paljasta jäljellä olevat</button>
+          <button id="reset-scene" type="button" class="secondary">Nollaa tehtävä</button>
+        </div>
+        <div id="completion" class="completion" hidden>
+          <strong>Kaikki kohteet löytyivät.</strong>
+          <p>Muotoile nyt muutosmerkki ja perustele, milloin vaihtoehtoiseen reittiin siirrytään.</p>
+        </div>
+        <p class="alternative-link"><a href="./accessible.html">Saavutettava tekstivaihtoehto</a></p>
+        <p class="boundary">Fiktiivinen harjoitusympäristö – ei virallinen turvallisuus- tai saavutettavuusarvio.</p>
+      </aside>
+    </main>
+  </div>
+
+  <dialog id="hotspot-dialog" class="hotspot-dialog" aria-labelledby="dialog-title">
+    <button id="close-dialog" class="dialog-close" type="button" aria-label="Sulje">×</button>
+    <p id="dialog-label" class="dialog-label"></p>
+    <h2 id="dialog-title"></h2>
+    <p id="dialog-text"></p>
+    <div class="reflection"><strong>Pohdi:</strong> <span id="dialog-reflection"></span></div>
+  </dialog>
+
+  <noscript><p class="noscript">360-näkymä tarvitsee JavaScriptin. Käytä <a href="./accessible.html">tekstimuotoista vaihtoehtoa</a>.</p></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
