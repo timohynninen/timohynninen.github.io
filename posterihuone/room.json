@@ -1,29 +1,238 @@
 {
   "model": "taukohuone.glb",
-  "spawn": [6.3, 1.65, -3.8],
-  "lookAt": [6.3, 1.6, -6.5],
+  "spawn": [
+    10.5,
+    1.65,
+    -4.4
+  ],
+  "lookAt": [
+    9.7,
+    1.2,
+    -6.5
+  ],
+  "layout": "sote-exhibition",
   "posters": [
     {
-      "title": "Kuusiaita",
-      "subtitle": "Peltometsäviljely · Ryhmä 3",
-      "description": "Spruce Fence Agroforestry Concept. Opiskelijoiden suunnitelma Mustialan laidunalueen kuusiaidasta, luontopolusta ja monimuotoisuudesta.",
-      "image": "hamk-kuusiaita-ryhma-3.webp",
-      "pdf": "hamk-kuusiaita-ryhma-3.pdf",
-      "credit": "HAMKin opiskelijat, ryhmä 3 · Mustiala · 2026 · CC BY 4.0",
-      "position": [5.45, 1.65, -6.5],
-      "rotation": 0,
-      "width": 1.05
+      "slot": 1,
+      "title": "Työhyvinvoinnin tukeminen henkilöstösiirroissa kotihoidossa – lähijohtamisen keinot muutostilanteessa",
+      "placeholder": false,
+      "position": [
+        11.6,
+        1.7,
+        -7.0
+      ],
+      "rotation": -1.5707963267948966,
+      "mount": "stand",
+      "width": 1.15,
+      "height": 0.646875,
+      "zoomUrl": "https://hamk.zoom.us/j/62749711596?pwd=ouv3q5QS74xWC9ZGC9heGD8bRkfPAg.1",
+      "subtitle": "Elina Mattila",
+      "description": "Työhyvinvoinnin tukeminen henkilöstösiirroissa kotihoidossa – lähijohtamisen keinot muutostilanteessa",
+      "image": "sote-01.webp",
+      "pdf": "sote-01.pdf",
+      "credit": "Elina Mattila",
+      "sourceFile": "Elina_Mattila_posteri.pdf"
     },
     {
-      "title": "Omenatarha",
-      "subtitle": "Peltometsäviljely · Ryhmä 1",
-      "description": "Mustialan omenatarhan maaperä, ilmasto, kasvillisuus ja alueen kehittämisen havainnekuva.",
-      "image": "hamk-omenatarha-ryhma-1.webp",
-      "pdf": "hamk-omenatarha-ryhma-1.pdf",
-      "credit": "HAMKin opiskelijat, ryhmä 1 · Mustiala · 2026. Näyttelykäytön lisenssiä ei ole vahvistettu.",
-      "position": [7.05, 1.65, -6.5],
+      "slot": 2,
+      "title": "Sosiaali- ja terveysalan työntekijöiden psykologisen turvallisuuden lisääminen osana henkilöstöstrategiaa",
+      "placeholder": false,
+      "position": [
+        11.6,
+        1.7,
+        -4.8
+      ],
+      "rotation": -1.5707963267948966,
+      "mount": "stand",
+      "width": 0.72,
+      "height": 0.9317647058823529,
+      "zoomUrl": "https://hamk.zoom.us/j/63204545479?pwd=WTgbSVaYIUAylHT8kwCqRGMKS36yal.1",
+      "subtitle": "Sote-posteri",
+      "description": "Sosiaali- ja terveysalan työntekijöiden psykologisen turvallisuuden lisääminen osana henkilöstöstrategiaa",
+      "image": "sote-02.webp",
+      "pdf": "sote-02.pdf",
+      "credit": "Lähdetiedosto: Posteri valmis.pdf",
+      "sourceFile": "Posteri valmis.pdf"
+    },
+    {
+      "slot": 3,
+      "title": "Työyhteisön hyvinvoinnin tukeminen työntekijöiden vahvuuksia hyödyntämällä",
+      "placeholder": false,
+      "position": [
+        11.6,
+        1.7,
+        -3.95
+      ],
+      "rotation": -1.5707963267948966,
+      "mount": "stand",
+      "width": 0.72,
+      "height": 0.96,
+      "zoomUrl": "https://hamk.zoom.us/j/67500049008?pwd=aoCfbIniZgklR7uq5M8OJRUKZE2cfi.1",
+      "subtitle": "Tiia Bhandari ja Sanna Koski",
+      "description": "Työyhteisön hyvinvoinnin tukeminen työntekijöiden vahvuuksia hyödyntämällä",
+      "image": "sote-03.webp",
+      "pdf": "sote-03.pdf",
+      "credit": "Tiia Bhandari ja Sanna Koski",
+      "sourceFile": "Posteri_Bhandari_Tiia_&_Koski_Sanna.pdf"
+    },
+    {
+      "slot": 4,
+      "title": "Digitaalisen asioinnin hyödyntäminen hoidon jatkuvuuden tukena perusterveydenhuollossa – toimintamallin kehittäminen",
+      "placeholder": false,
+      "position": [
+        10.95,
+        1.7,
+        -2.4
+      ],
+      "rotation": -1.5707963267948966,
+      "mount": "stand",
+      "width": 0.72,
+      "height": 1.0185255198487713,
+      "zoomUrl": "https://hamk.zoom.us/j/63442347163?pwd=2b08XlafmIplMg08CEEa9UamxbifkQ.1",
+      "subtitle": "Krista Juuti ja Hanna Ristola",
+      "description": "Digitaalisen asioinnin hyödyntäminen hoidon jatkuvuuden tukena perusterveydenhuollossa – toimintamallin kehittäminen",
+      "image": "sote-04.webp",
+      "pdf": "sote-04.pdf",
+      "credit": "Krista Juuti ja Hanna Ristola",
+      "sourceFile": "Posteri_Juuti_Ristola.pdf"
+    },
+    {
+      "slot": 5,
+      "title": "Muutosmyönteisyys neuvolatyössä",
+      "placeholder": false,
+      "position": [
+        9.2,
+        1.7,
+        -6.5
+      ],
       "rotation": 0,
-      "width": 1.05
+      "mount": "stand",
+      "width": 1.15,
+      "height": 0.646875,
+      "zoomUrl": "https://hamk.zoom.us/j/63515092730?pwd=7MZbm0OKcwjakHus2Jb9C436HvrIDr.1",
+      "subtitle": "Sofia Nyberg",
+      "description": "Muutosmyönteisyys neuvolatyössä",
+      "image": "sote-05.webp",
+      "pdf": "sote-05.pdf",
+      "credit": "Sofia Nyberg",
+      "sourceFile": "Sofia N., POSTERI pp, 2026.pdf"
+    },
+    {
+      "slot": 6,
+      "title": "Hoitotyön ammatillisen kielitaidon tukeminen pelillisen oppimisen avulla",
+      "placeholder": false,
+      "position": [
+        10.5,
+        1.7,
+        -6.5
+      ],
+      "rotation": 0,
+      "mount": "stand",
+      "width": 0.72,
+      "height": 1.018337531486146,
+      "zoomUrl": "https://hamk.zoom.us/j/65733844714?pwd=is9Bqv7Q8O777eNQCUtoU8iCtpsBOE.1",
+      "subtitle": "Taru Piironen",
+      "description": "Hoitotyön ammatillisen kielitaidon tukeminen pelillisen oppimisen avulla",
+      "image": "sote-06.webp",
+      "pdf": "sote-06.pdf",
+      "credit": "Taru Piironen",
+      "sourceFile": "Taru Piironen Posteri.pdf"
+    },
+    {
+      "slot": 7,
+      "title": "Luontoympäristön integroiminen valtion työtiloihin",
+      "placeholder": false,
+      "position": [
+        3.5,
+        1.7,
+        0.2
+      ],
+      "rotation": 3.141592653589793,
+      "mount": "stand",
+      "width": 0.72,
+      "height": 1.0185255198487713,
+      "zoomUrl": "https://hamk.zoom.us/j/68662035236?pwd=NrhUalacvygqXhP4k0fdqeCzVljnnD.1",
+      "subtitle": "Nita Nousiainen",
+      "description": "Luontoympäristön integroiminen valtion työtiloihin",
+      "image": "sote-07.webp",
+      "pdf": "sote-07.pdf",
+      "credit": "Nita Nousiainen",
+      "sourceFile": "Tiedeposteri_Nita Nousiainen.pdf"
+    },
+    {
+      "slot": 8,
+      "title": "Posteripaikka 08",
+      "placeholder": true,
+      "position": [
+        1.65,
+        1.7,
+        -3.9
+      ],
+      "rotation": 1.5707963267948966,
+      "mount": "stand",
+      "width": 0.72,
+      "height": 1.02,
+      "zoomUrl": "https://hamk.zoom.us/j/66598827302?pwd=e0OWq9qLQm9wn0h6QvsbSm9JSKx0XK.1"
+    },
+    {
+      "slot": 9,
+      "title": "Posteripaikka 09",
+      "placeholder": true,
+      "position": [
+        -0.8,
+        1.7,
+        -4.8
+      ],
+      "rotation": 1.5707963267948966,
+      "mount": "stand",
+      "width": 0.72,
+      "height": 1.02,
+      "zoomUrl": "https://hamk.zoom.us/j/62988479282?pwd=gALrrKuJgR6eDTdqeiH1gm1gTsuEgJ.1"
+    },
+    {
+      "slot": 10,
+      "title": "Posteripaikka 10",
+      "placeholder": true,
+      "position": [
+        5.3,
+        1.7,
+        -6.5
+      ],
+      "rotation": 0,
+      "mount": "stand",
+      "width": 0.72,
+      "height": 1.02,
+      "zoomUrl": "https://hamk.zoom.us/j/66038184994?pwd=2MtXyxp8umETi1XnKeHkbG1oOrktCb.1"
+    },
+    {
+      "slot": 11,
+      "title": "Posteripaikka 11",
+      "placeholder": true,
+      "position": [
+        6.5,
+        1.7,
+        -6.5
+      ],
+      "rotation": 0,
+      "mount": "stand",
+      "width": 0.72,
+      "height": 1.02,
+      "zoomUrl": "https://hamk.zoom.us/j/68630476080?pwd=yVUfJWN07lHZ26ROo512ZQJq9DSRaP.1"
+    },
+    {
+      "slot": 12,
+      "title": "Posteripaikka 12",
+      "placeholder": true,
+      "position": [
+        7.7,
+        1.7,
+        -6.5
+      ],
+      "rotation": 0,
+      "mount": "stand",
+      "width": 0.72,
+      "height": 1.02,
+      "zoomUrl": "https://hamk.zoom.us/j/68003609685?pwd=OH3QgvATKJHuc8H2hDNOoMYCvDmsHP.1"
     }
   ]
 }
