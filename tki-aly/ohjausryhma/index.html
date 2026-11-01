@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TKI-Äly – hankkeen tila ja loppuraportti ohjausryhmälle</title>
+  <style>
+    :root { color-scheme:light; --ink:#20252a; --muted:#53606a; --line:#d8dde1; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#fff; color:var(--ink); font:17px/1.65 system-ui,sans-serif; }
+    main { max-width:1060px; margin:auto; padding:36px 28px 64px; }
+    h1,h2,h3,h4 { color:#15191d; line-height:1.25; }
+    h1 { font-size:2rem; margin:12px 0 22px; }
+    h2 { font-size:1.5rem; margin:0 0 20px; }
+    h3 { font-size:1.2rem; margin:30px 0 16px; }
+    h4 { font-size:1.04rem; margin:26px 0 12px; }
+    p { margin:12px 0; }
+    li { margin:8px 0; }
+    ul,ol { padding-left:24px; }
+    section { margin-top:38px; padding-top:26px; border-top:1px solid var(--line); }
+    .report-part { margin-top:30px; padding-top:18px; border-top:1px solid var(--line); }
+    [id] { scroll-margin-top:20px; }
+    a { color:#17577c; text-underline-offset:3px; overflow-wrap:anywhere; }
+    a:focus-visible { outline:3px solid #17577c; outline-offset:3px; }
+    .meta,footer { color:var(--muted); font-size:.9rem; }
+    .lead { font-size:1.12rem; }
+    .toc { margin-top:26px; padding-top:20px; border-top:1px solid var(--line); }
+    .toc h2 { font-size:1.15rem; margin-bottom:12px; }
+    .toc ul { list-style:none; margin:0; padding:0; }
+    .toc li { margin:6px 0; line-height:1.45; }
+    .toc > ul > li { margin:12px 0; }
+    .toc > ul > li > a { font-weight:650; }
+    .toc ul ul { margin:6px 0 0 16px; padding-left:14px; border-left:1px solid var(--line); font-size:.94em; }
+    .table-wrap { overflow-x:auto; margin:18px 0; }
+    table { width:100%; border-collapse:collapse; font-size:.95rem; line-height:1.5; }
+    caption { text-align:left; font-weight:650; margin-bottom:10px; }
+    th,td { border:1px solid var(--line); padding:11px 13px; text-align:left; vertical-align:top; }
+    thead th { background:#f1f3f5; }
+    tbody th { font-weight:600; width:33%; }
+    footer { margin-top:36px; }
+    @media(max-width:640px) {
+      body { font-size:16px; }
+      main { padding:22px 16px 42px; }
+      h1 { font-size:1.65rem; }
+      h2 { font-size:1.35rem; }
+      th,td { padding:9px; }
+      .indicator-table { min-width:660px; }
+    }
+    @media print {
+      body { font-size:10.5pt; }
+      main { max-width:none; padding:0; }
+      nav { display:none; }
+      section { margin-top:22px; padding-top:18px; }
+      h2,h3,h4 { break-after:avoid; }
+      tr { break-inside:avoid; }
+      .table-wrap { overflow:visible; }
+      a { color:inherit; text-decoration:none; }
+      @page { size:A4; margin:18mm; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="meta">TKI-Äly · A81260 · Ohjausryhmän kokous 2.11.2026 klo 13 · Teams</p>
+    <h1>Hankkeen tila ja loppuraportin keskeinen sisältö</h1>
+    <p class="lead">TKI-Äly-hanke päättyi 31.10.2026. Hankkeen budjetti on käytetty eikä viimeisimmästä muutoshakemuksesta ole poikettu.</p>
+    <p>Hankeaika oli 1.9.2024–31.10.2026. Raportti kokoaa ohjausryhmälle hankkeen tulokset, yritysten palautteen, toiminnan jatkumisen sekä määrällisten tavoitteiden toteuman.</p>
+    <nav class="toc" aria-labelledby="sisallysluettelo-otsikko"><h2 id="sisallysluettelo-otsikko">Sisällysluettelo</h2>
+<ul>
+<li><a href="#yhteenveto">1 Hankkeen tilanne</a></li>
+<li>
+<a href="#toimenpiteet">2 Hankkeen toimenpiteet ja tulokset</a><ul>
+<li><a href="#toimenpide-otsikko-3">TP1 Hallinnointi, viestintä ja tapahtumat</a></li>
+<li>
+<a href="#toimenpide-otsikko-4">TP2 Yritysten tarpeiden kartoitus ja tekoälyn käyttöideat</a><ul>
+<li><a href="#yritysten-ideat-mita-yritykset-osaavat-kuvitella-tekoalylla-tehtavan">Mitä yritykset osaavat kuvitella tekoälyllä tehtävän?</a></li>
+<li><a href="#yritysten-ideat-mita-ideat-kertovat-yritysten-ajattelusta">Mitä ideat kertovat yritysten ajattelusta?</a></li>
+</ul>
+</li>
+<li>
+<a href="#toimenpide-otsikko-7">TP3 Käytännön yrityskokeilut</a><ul><li><a href="#toimenpide-otsikko-8">Yritysten osallistuminen</a></li></ul>
+</li>
+<li><a href="#toimenpide-otsikko-9">TP4 Tekoälylaboratorion tekninen toteutus</a></li>
+<li>
+<a href="#toimenpide-otsikko-10">TP5 Julkaisu, ylläpito ja jatkohyödyntäminen</a><ul><li><a href="#tuotosten-julkaisuketju">Tuotosten saatavuus ja julkaiseminen</a></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#loppuraportti">3 Loppuraportin keskeinen sisältö</a><ul>
+<li>
+<a href="#loppuraportin-tiivistelma-otsikko">3.1 Julkinen tiivistelmä ja tuotosten saatavuus</a><ul>
+<li><a href="#lr-tiivistelma-fi">Hankkeen tulosten julkinen tiivistelmä</a></li>
+<li><a href="#lr-tiivistelma-en">Public summary</a></li>
+<li><a href="#lr-saatavuus">Tuotosten saatavuus</a></li>
+</ul>
+</li>
+<li>
+<a href="#toteutus-otsikko">3.2 Hankkeen toteutus, tulokset ja vaikutukset</a><ul>
+<li><a href="#kohderyhma-ja-alue">Kohderyhmä ja alueellinen kohdentuminen</a></li>
+<li><a href="#yritysten-tarpeet">Yritysten tarpeet ja kartoituksen tulokset</a></li>
+<li><a href="#kokeilut-ja-tuotokset">Yrityskokeilut ja tekoälylaboratorio</a></li>
+<li><a href="#palaute-ja-vaikutukset">Palaute, oppiminen ja käyttöönotto</a></li>
+<li><a href="#tavoitteiden-toteutuminen">Tavoitteiden toteutuminen</a></li>
+<li><a href="#jatkokaytto">Tulosten hyödyntäminen hankkeen jälkeen</a></li>
+<li><a href="#viestinta">Viestintä ja tulosten levittäminen</a></li>
+<li><a href="#aikataulu-ja-talous">Toteutuksen muutokset, aikataulu ja talous</a></li>
+<li><a href="#julkaisu-ja-arkistointi">Tuotosten julkaiseminen ja aineiston säilyttäminen</a></li>
+<li><a href="#hankeyhteydet">Hankeyhteydet ja yhteistyöverkostot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#mittarit">4 Mittarikoonti</a><ul>
+<li><a href="#toiminnalliset-tavoitteet">Toiminnalliset tavoitteet</a></li>
+<li><a href="#indikaattorikoonti">EURA-indikaattorien koonti</a></li>
+</ul>
+</li>
+</ul></nav></header>
+
+  <section id="yhteenveto">
+    <h2>1 Hankkeen tilanne</h2>
+    <ul>
+      <li>
+<strong>Yrityskokeilujen tavoite saavutettiin: 11/10.</strong> Kokeiluissa syntyi raporttien tarkistus- ja tiedonsiirtotyökaluja, agentteja, sähköpostiyhteydenottojen käsittelyä sekä valmennus- ja sisällöntuotantoratkaisuja.</li>
+      <li>
+<strong>Kartoitus kattoi 16 yritystä suhteessa 20 yrityksen tavoitteeseen.</strong> Menetelmänä olivat puolistrukturoidut haastattelut tai konkreettisen käyttötarpeen kuvaus. Yritysten osallistumisia kertyi 27 kpl.</li>
+      <li>
+<strong>Tekoälylaboratorio kehitettiin yrityskokeilujen tueksi.</strong> HAMKin laboratorioon liittyvää infrastruktuuria käytettiin kaikissa 11 kokeilussa. Lisäksi yhden yrityksen käyttöön kahdennettiin oma ympäristö.</li>
+      <li>
+<strong>Palaute oli myönteistä ja konkreettiset esimerkit tärkeitä.</strong> Kauppavalmennus kertoi alkaneensa käyttää tekoälyä omien työkalujen rakentamiseen nähtyään hankkeen asiantuntijan työskentelyä. Käyttöönoton kynnys on edelleen korkea, ja yritysten oma panostus kehittämiseen ja käyttöön on tärkeää.</li>
+      <li>
+<strong>Osaaminen ja tuotokset jatkuvat HAMKin palveluissa ja TKI-hankkeissa.</strong> Tulokset ovat alueen yritysten hyödynnettävissä AI Lab -palveluna ja myös Define-toiminnan kautta. Laboratorion työkaluja hyödynnetään CareCompanion-hankkeessa sekä 1.1.2027 alkavassa logistiikka-alan hankkeessa.</li>
+    </ul>
+  </section>
+
+  <section id="toimenpiteet">
+<h2>2 Hankkeen toimenpiteet ja tulokset</h2>
+<div class="report-part" id="hallinnointi">
+<h3 id="toimenpide-otsikko-3">TP1 Hallinnointi, viestintä ja tapahtumat</h3>
+<p>Toimenpide kattoi hankkeen koordinoinnin ja seurannan, tekoälytyökalujen ja ajantasaisen tiedon kartoituksen sekä tulosten levittämisen. Vuodelle 2026 suunniteltiin kaksi viestintä- ja koulutustilaisuutta.</p>
+<p>Hankehallinto ja ohjausryhmätyö toteutuivat. Yrityksiä tavoitettiin ja tekoälytietoa jaettiin HAMKin sekä yhteistyökumppaneiden kanavissa, omassa tilaisuudessa, Forssan Yrityskehityksen tapahtumissa, InnoHoivaHub-yhteistyössä, kauppakamarin koulutuksessa ja FLASH-tapahtumassa. Tulosten levittämistä jatketaan Limowan <em>Tekoälyagentit logistiikan tukena</em> -tapahtumassa.</p>
+</div>
+<div id="yritysten-ideat" class="report-part">
+    <h3 id="toimenpide-otsikko-4">TP2 Yritysten tarpeiden kartoitus ja tekoälyn käyttöideat</h3>
+    
+    <p>Kartoituksen tulos on 16/20 yritystä. Menetelmänä olivat puolistrukturoidut haastattelut tai konkreettisen käyttötarpeen kuvaus. Tietoa kertyi kokeiluyrityksiltä, tapahtumiin osallistuneilta ja vain haastatelluilta yrityksiltä. Yritysten osallistumisia kertyi 27 kpl. Haastattelujen ja kokeilujen yhteinen ideakooste kuvaa, mitä yritykset hahmottavat tekoälyllä tehtävän.</p>
+<h4 id="yritysten-ideat-mita-yritykset-osaavat-kuvitella-tekoalylla-tehtavan">Mitä yritykset osaavat kuvitella tekoälyllä tehtävän?</h4>
+    <ul>
+      <li>
+<strong>Arjen assistentti ja asiakaspalvelu:</strong> sähköpostien lajittelu, yhteydenottojen käsittely ja vastausluonnokset, puhemuistiinpanot, puhelujen ja kokousten tiivistelmät sekä ajankäytön kirjaaminen.</li>
+      <li>
+<strong>Oman tiedon hyödyntäminen ja asiakirjatyö:</strong> haku sisäisistä aineistoista, asiantuntijatyön ja lainopillisen työn tuki, sopimus- ja asiakirjaluonnokset, selvitykset sekä anonymisointi.</li>
+      <li>
+<strong>Raportointi ja tietojen tarkastus:</strong> vastuullisuusraportoinnin tuki, poikkeamien ja kaksoiskirjausten löytäminen sekä määrämuotoisten asiakirjojen, tarjousten ja laadun tarkastus.</li>
+      <li>
+<strong>Tuotanto- ja mittaustiedon analyysi:</strong> hävikin ja muiden poikkeamien havainnointi, testaus- ja keskeytysraporttien tulkinta, juurisyiden selvittäminen sekä mittausraporttien koosteet.</li>
+      <li>
+<strong>Myynti, markkinointi ja sisällöntuotanto:</strong> verkkosivut, kampanjat ja mainosluonnokset tekstinä, puheena ja musiikkina; liiketoimintasuunnittelu, asiakashankinta ja asiakastarpeiden ennakointi.</li>
+      <li>
+<strong>Agentit ja järjestelmien väliset työnkulut:</strong> yrityksen omiin tarpeisiin muokatut agentit ja tekoäly-ympäristöt, tietojen siirto järjestelmästä toiseen sekä tiedonhaku esimerkiksi ERP-järjestelmästä.</li>
+    </ul>
+    <h4 id="yritysten-ideat-mita-ideat-kertovat-yritysten-ajattelusta">Mitä ideat kertovat yritysten ajattelusta?</h4>
+    <p>Tekoälyä hahmotetaan konkreettisten työtehtävien avustajaksi ja työvaiheiden automatisoijaksi. Keskeisiä odotuksia ovat rutiinityön väheneminen, nopeampi tiedonkäsittely ja tasaisempi laatu. Oma tieto ja omat järjestelmät ovat hyödyntämisen ytimessä; asiantuntijan tarkastus ja vastuu säilyvät.</p>
+    <p>Hankkeen havaintojen mukaan tekoälyltä odotettiin usein valmista, kaikkeen sopivaa työkalua. Työkalujen tuttuudesta huolimatta käyttöönoton kynnys on korkea: yritysten on panostettava ratkaisujen kehittämiseen ja käyttöön. Datan saatavuus, integraatiot ja osaaminen vaikuttavat toteutukseen. </p>
+    
+  <p>Koska kehittäminen yritysten kanssa jatkui havaintojen kokoamisen aikana, kooste päivitetään loppuraportoinnissa. Tuotoksen julkaistava versio lähetetään HAMKin julkaisukanavaan loppuraportin viimeistelyn yhteydessä.</p>
+</div>
+
+  <div class="report-part" id="yritykset">
+<h3 id="toimenpide-otsikko-7">TP3 Käytännön yrityskokeilut</h3>
+<p><strong>11/10 kokeilua – tavoite saavutettu.</strong> Kokeiluissa ratkaistiin yritysten konkreettisia tarpeita ja räätälöitiin ratkaisuja yhteiskehittämisessä. Kaikista 11 yrityksestä on toteutuskuvaus.</p>
+<div class="table-wrap"><table>
+      <caption>11 yrityskokeilua ja niiden sisältö lähdeaineiston mukaan</caption>
+      <thead><tr>
+<th scope="col">Yritys</th>
+<th scope="col">Toteutettu kokeilu tai tuotos</th>
+</tr></thead>
+      <tbody>
+        <tr>
+<td>Käkikuu</td>
+<td>Tekoälyn kyvykkyyksiä kokeiltiin vastuullisuusraportoinnin tukena ja raportointivaatimusten huomioimisessa.</td>
+</tr>
+        <tr>
+<td>Kauppavalmennus</td>
+<td>Tekoälyä hyödynnettiin kaupan hävikkidatan käsittelyyn ja poikkeamien havainnointiin. Yritys kertoi palautteessa alkaneensa hyödyntää tekoälyä omien työkalujen rakentamiseen nähtyään, miten hankkeen asiantuntija teki samaa. </td>
+</tr>
+        <tr>
+<td>Juusose</td>
+<td>Kaupan ostolaskujärjestelmän raporttien analysointi. Tekoälyn avulla luotiin työkalu, joka käy raportit läpi ja tunnistaa vahingossa kahteen kertaan kirjatut tietueet.</td>
+</tr>
+        <tr>
+<td>3DBear</td>
+<td>Hankkeen tekoäly-ympäristöstä kahdennettiin versio yrityksen käyttöön ja siihen luotiin yrityksen tarpeisiin sopivia agentteja. Yritystä konsultoitiin vastaavan ympäristön rakentamisesta omaan hallintaan. Yritys rakentaa jo lähtökohtaisesti liiketoimintaansa tekoälyn ympärille. </td>
+</tr>
+        <tr>
+<td>Asianajotoimisto Annia</td>
+<td>Tekoälyn hyödyntämistä kokeiltiin salassapitoa edellyttävässä asiantuntijatyössä. Tekoälyn avulla kehitettiin työkalu sähköpostiyhteydenottojen automaattiseen käsittelyyn.</td>
+</tr>
+        <tr>
+<td>Asianajotoimisto Naturata</td>
+<td>Avoimen lähdekoodin tekoälyagentteja kokeiltiin lainopillisessa työssä ja tuloksia verrattiin kaupallisiin ohjelmistoihin.</td>
+</tr>
+        <tr>
+<td>Erkamet</td>
+<td>Tekoälyagenttia kokeiltiin metallipajan päivittäisen työn tukena. Painopisteenä oli puheohjaus muistiinpanojen tekemiseen koneistajan työssä.</td>
+</tr>
+        <tr>
+<td>Keskusautohalli</td>
+<td>Yhteistyö tehtiin Forssan toimipisteen kanssa. Automekaanikoille luotiin matalan kynnyksen perusvalmennuksen materiaali ja puolen päivän koulutuskokonaisuus. </td>
+</tr>
+        <tr>
+<td>Orla</td>
+<td>Käytännössä kokeiltiin verkkosivujen ja mainosten tekemistä, personoitujen tekoälyagenttien luomista sekä liiketoimintasuunnitelman laatimista tekoälyavusteisesti.</td>
+</tr>
+        <tr>
+<td>PirMas</td>
+<td>Tekoälyä kokeiltiin radiomainosten luonnosten sisällöntuotantoon: käsikirjoituksiin, koneluettuun puheeseen ja taustamusiikkiin.</td>
+</tr>
+        <tr>
+<td>Kanta-Hämeen aluetaksi</td>
+<td>Tekoälyä hyödynnettiin kuittijärjestelmän ja tilausliikenteen raportoinnin kehittämisessä. Tekoälyn avulla luotiin työkalu, joka siirtää tietoja järjestelmästä toiseen.</td>
+</tr>
+      </tbody>
+    </table></div>
+    <h4 id="toimenpide-otsikko-8">Yritysten osallistuminen</h4>
+<p>Hankkeeseen osallistui 16 eri yritystä. Kokeiluyrityksiä oli 11 ja tapahtumien tai muun yhteistyön yrityksiä 12; seitsemän kuului molempiin ryhmiin. Yritysten osallistumisia kertyi 27 kpl. NO03:n ja RCO04:n laskentaoletus on kummassakin 11 yritystä. Infrastruktuuria käytettiin kaikissa 11 kokeilussa.</p>
+<div class="table-wrap"><table id="yrityskohtainen-indikaattorikoonti">
+      <caption>Yrityskohtainen koonti: 1 = mukana ryhmässä, — = ei merkintää ryhmässä</caption>
+      <thead><tr>
+<th scope="col">Yritys</th>
+<th scope="col">Yhteistyö / RCO10</th>
+<th scope="col">Kokeilu / NO03 ja RCO04</th>
+</tr></thead>
+      <tbody>
+        <tr>
+<td>Käkikuu</td>
+<td>1</td>
+<td>1</td>
+</tr>
+        <tr>
+<td>Kauppavalmennus</td>
+<td>1</td>
+<td>1</td>
+</tr>
+        <tr>
+<td>Juusose</td>
+<td>—</td>
+<td>1</td>
+</tr>
+        <tr>
+<td>3DBear</td>
+<td>—</td>
+<td>1</td>
+</tr>
+        <tr>
+<td>Asianajotoimisto Annia</td>
+<td>1</td>
+<td>1</td>
+</tr>
+        <tr>
+<td>Asianajotoimisto Naturata</td>
+<td>1</td>
+<td>1</td>
+</tr>
+        <tr>
+<td>Erkamet</td>
+<td>—</td>
+<td>1</td>
+</tr>
+        <tr>
+<td>Keskusautohalli</td>
+<td>1</td>
+<td>1</td>
+</tr>
+        <tr>
+<td>Orla</td>
+<td>1</td>
+<td>1</td>
+</tr>
+        <tr>
+<td>PirMas</td>
+<td>1</td>
+<td>1</td>
+</tr>
+        <tr>
+<td>Kanta-Hämeen aluetaksi</td>
+<td>—</td>
+<td>1</td>
+</tr>
+        <tr>
+<td>Millog</td>
+<td>1</td>
+<td>—</td>
+</tr>
+        <tr>
+<td>Kone</td>
+<td>1</td>
+<td>—</td>
+</tr>
+        <tr>
+<td>DA Group</td>
+<td>1</td>
+<td>—</td>
+</tr>
+        <tr>
+<td>Ziirto</td>
+<td>1</td>
+<td>—</td>
+</tr>
+        <tr>
+<td>Ixtriim</td>
+<td>1</td>
+<td>—</td>
+</tr>
+      </tbody>
+      <tfoot><tr>
+<th scope="row">Yrityksiä indikaattoriryhmässä</th>
+<td><strong>12</strong></td>
+<td><strong>11</strong></td>
+</tr></tfoot>
+    </table></div>
+</div>
+<div id="laboratorion-toteutus" class="report-part">
+    <h3 id="toimenpide-otsikko-9">TP4 Tekoälylaboratorion tekninen toteutus</h3>
+    <p>Laboratorion tekninen toteutus yhdistää paikallisesti ajettavat kielimallit, selainkäyttöliittymän, ohjelmallisen aineistonkäsittelyn ja tehtäväkohtaiset agentit. Ratkaisu mahdollistaa tekoälykokeilut organisaation hallitsemassa ympäristössä.</p>
+
+    <p><strong>Perusrakenne:</strong> käyttäjän selain ↔ OpenWebUI-käyttöliittymä ↔ Ollama-mallipalvelu ↔ paikallinen kielimalli.</p>
+    <div class="table-wrap"><table>
+      <caption>Ohjelmiston osat ja niiden tehtävät</caption>
+      <thead><tr>
+<th scope="col">Osa</th>
+<th scope="col">Miten se toimii</th>
+<th scope="col">Mitä se mahdollistaa</th>
+</tr></thead>
+      <tbody>
+        <tr>
+<td>OpenWebUI</td>
+<td>Käyttäjä lähettää tehtävän ja lukee vastauksen selaimessa. Käyttöliittymä on yhteydessä Ollamaan HTTP/REST-rajapinnan kautta.</td>
+<td>Yhteinen keskustelukäyttöliittymä erilaisille paikallisille kielimalleille.</td>
+</tr>
+        <tr>
+<td>Ollama</td>
+<td>Huolehtii kielimallien asentamisesta, hallinnasta ja ajamisesta. Artikkelissa esimerkkeinä ovat Llama3, Mistral-NeMo ja QwQ.</td>
+<td>Mallin vaihtaminen tai valitseminen tehtävän mukaan saman ohjelmistorakenteen sisällä.</td>
+</tr>
+        <tr>
+<td>OpenWebUI Pipelines</td>
+<td>Keskusteluun liitettiin syötteiden ja tulosten käsittelyä sekä ulkoisten funktioiden suorittamista. Näin työvaiheissa voidaan käsitellä myös tiedostoja ja rakenteista tietoa.</td>
+<td>Kielimallin yhdistäminen ohjelmalliseen tiedonkäsittelyyn ja useammasta vaiheesta koostuviin tehtäviin.</td>
+</tr>
+        <tr>
+<td>CrewAI-agentit</td>
+<td>Pipelines-ketjuihin yhdistettiin agenttipohjainen työnkulku. Eri agenteille voidaan antaa omat tehtävät, tarvittavat taustatiedot ja eri malli tai mallin erillinen ilmentymä.</td>
+<td>Tehtävän jakaminen yhteistyötä tekeville agenteille, esimerkiksi tiivistämiseen ja tietojen tarkistamiseen.</td>
+</tr>
+        <tr>
+<td>Tehtävien ohjaus kehotteilla</td>
+<td>Järjestelmäkehotteilla ohjattiin monivaiheisen tehtävän jäsentämistä. Artikkelissa kuvataan myös kehotteen mukauttamista epäselvien tai monivaiheisten kysymysten käsittelyyn.</td>
+<td>Tehtävän vaiheistaminen ja vastausten rakenteen ohjaaminen.</td>
+</tr>
+      </tbody>
+    </table></div>
+
+    <p><strong>Modulaarisuus ja siirrettävyys:</strong> ohjelmisto suunniteltiin helposti paketoitavaksi työkalukokonaisuudeksi, jota voidaan jakaa kontteina esimerkiksi Dockerin tai Podmanin avulla. Kontti kokoaa ohjelmiston ja sen riippuvuudet siirrettäväksi paketiksi. Tämä antaa pohjan ympäristön viemiselle eri organisaatioiden käyttöön.  </p>
+    <p><strong>Käytännön merkitys:</strong> organisaation hallitsema tekoälymalli tuottaa vastaukset, Pipelines liittää mukaan tarvittavan aineistonkäsittelyn ja CrewAI mahdollistaa työn jakamisen agenteille. Kokonaisuus tarjoaa perustan yrityskohtaisille tekoälyavustajille ja työnkuluille. HAMKin tekoälylaboratorioon liittyvää infrastruktuuria käytettiin jokaisessa 11 yrityskokeilussa. Lisäksi 3DBearin käyttöön kahdennettiin oma ympäristö.   </p>
+    <p><strong>Jatkohyödyntäminen ja dokumentointi:</strong> toteutettu infrastruktuuri on hyödynnettävissä myös omalla laitteistolla. Vertaisarvioinnissa oleva Pilkku-artikkeli avaa käytetyt työkalut ja toteutustavan. Työkaluja hyödynnetään HAMKin palveluissa ja jatkohankkeissa. <a href="#jatkohyodyntaminen">Toiminnan jatkuminen</a>. </p>
+    
+  </div>
+
+
+  <div id="jatkohyodyntaminen" class="report-part">
+    <h3 id="toimenpide-otsikko-10">TP5 Julkaisu, ylläpito ja jatkohyödyntäminen</h3>
+    <p class="lead">Hankkeessa syntynyt osaaminen ja tuotokset jatkuvat HAMKin yrityspalveluissa ja TKI-hankkeissa. Alueen yrityksille ne ovat tarjolla myös Define-toiminnan kautta. </p>
+    <ul>
+      <li>
+<strong>HAMKin AI Lab -palvelu:</strong> osaaminen ja tekoälyinfrastruktuuri ovat yritysten hyödynnettävissä. Palvelun kuvauksessa ylläpito kuuluu yrityksen kanssa sovittavaan palvelukokonaisuuteen. <a href="https://www.hamk.fi/palvelut/ai-lab/">AI Lab: tekoälyratkaisut yrityksille</a>. </li>
+      <li>
+<strong>CareCompanion:</strong> laboratorion työkaluja hyödynnetään chatbotin luomiseen.</li>
+      <li>
+<strong>Tekoäly työkaverina logistiikka-alalla:</strong> työkaluja hyödynnetään 1.1.2027 alkavassa hankkeessa agenttien ja chatbottien luomiseen.</li>
+      <li>
+<strong>Hyödyntäminen omalla laitteistolla:</strong> hankkeessa suunniteltua ja toteutettua infrastruktuuria voi hyödyntää myös omassa ympäristössä. Pilkku-artikkeli avaa käytetyt työkalut ja toteutustavan. Artikkeli on julkaisuprosessissa ja sen vertaisarviointi on käynnissä.</li>
+      <li>
+<strong>Tulosten jatkolevitys:</strong> Limowan <em>Tekoälyagentit logistiikan tukena</em> -tapahtuma. </li>
+      <li>
+<strong>Käyttöönoton tuki:</strong> paikallisen tekoälyn laitteistosuosituksia käsiteltiin kevään työpajassa. Esitysmateriaalit on lähetetty osallistujille.</li>
+    </ul>
+    <h4 id="tuotosten-julkaisuketju">Tuotosten saatavuus ja julkaiseminen</h4>
+    <ul>
+      <li>
+<strong>Nyt saatavilla:</strong> tekoälylaboratorion tekninen kuvaus artikkelina. </li>
+      <li>
+<strong>Loppuraportin viimeistelyn yhteydessä:</strong> kartoitus lähetetään HAMKin julkaisukanavaan.</li>
+      <li>
+<strong>Muut tuotokset:</strong> ensin julkaisu <a href="https://github.com/hamk-uas">HAMKin GitHub-tilillä</a>, sen jälkeen arkistointi Zenodoon. Raporttiin lisätään tuotoskohtaiset linkit ja pysyvät osoitteet niiden valmistuttua.</li>
+    </ul>
+    
+    
+  </div>
+
+
+
+
+
+
+
+
+  </section><section id="loppuraportti">
+    <h2>3 Loppuraportin keskeinen sisältö</h2>
+    <div class="report-part" id="loppuraportin-tiivistelma">
+      <h3 id="loppuraportin-tiivistelma-otsikko">3.1 Julkinen tiivistelmä ja tuotosten saatavuus</h3>
+      <h4 id="lr-tiivistelma-fi">Hankkeen tulosten julkinen tiivistelmä</h4>
+      <p> TKI-Äly-hankkeen tavoitteena oli vahvistaa Kanta-Hämeen pk-yritysten ja TKI-toimijoiden valmiuksia hyödyntää tekoälyä sekä kehittää avoimiin teknologioihin perustuva tutkimus- ja kehitysympäristö. Hankkeessa kartoitettiin yritysten tekoälyn käyttöä ja kehittämistarpeita, kehitettiin virtuaalinen tekoälylaboratorio ja toteutettiin yksitoista yrityskokeilua. Yrityskokeilujen määrällinen tavoite saavutettiin: 11/10.</p>
+<p>Kartoituksen yrityskohtainen tulos on osallistumisluettelon mukaiset 16 yritystä suhteessa 20 yrityksen tavoitteeseen. Menetelmänä käytettiin puolistrukturoituja haastatteluja tai konkreettisen käyttötarpeen kuvausta. Yritysten osallistumisia kertyi 27 kpl. Kartoituksen lopputuloksena koottiin temaattinen ideakooste haastatteluista ja yrityskokeiluista.  Tietoa kerättiin kokeiluyrityksiltä, tapahtumiin osallistuneilta ja osin vain haastatelluilta yrityksiltä. Teemoina ovat arjen assistentit, oma tieto ja asiakirjatyö, raportointi ja tietojen tarkastus, tuotanto- ja mittaustiedon analyysi, myynti ja sisällöntuotanto sekä agenttien työnkulut. Käyttöönottoa edistivät selkeä käyttötarkoitus ja kokeilumahdollisuus; rajoitteina olivat ajan ja osaamisen puute, tietosuoja- ja vastuukysymykset sekä datan saatavuus ja integraatiot. Hankkeen tuotoksia ovat kartoituksessa kertynyt tieto, tekoälylaboratorio sekä yrityslähtöiset kokeilut.   </p>
+<p>Palaute oli myönteistä, ja yritykset toivoivat konkreettisia esimerkkejä. Yksi osallistunut yritys kertoi alkaneensa käyttää tekoälyä omien työkalujen rakentamiseen nähtyään hankkeen asiantuntijan työskentelyä. Hankkeen havaintona tekoälyä odotettiin usein valmiina yleisratkaisuna; käyttöönotto edellyttää kuitenkin yritysten omaa panostusta kehittämiseen ja käyttöön. Kynnys on edelleen korkea, vaikka työkalut ovat tuttuja. </p>
+<p>Osaaminen ja tuotokset ovat yritysten hyödynnettävissä HAMKin AI Lab -palveluna ja myös Define-toiminnan kautta. Laboratorion työkaluja hyödynnetään CareCompanion-hankkeen chatbotissa sekä 1.1.2027 alkavassa Tekoäly työkaverina logistiikka-alalla -hankkeessa agenttien ja chatbottien rakentamiseen. Vertaisarvioinnissa oleva Pilkku-artikkeli kuvaa työkalut ja infrastruktuurin toteutustavan, jota voi hyödyntää myös omalla laitteistolla. </p>
+<p>Tekoälylaboratorion tekninen kuvaus on saatavilla artikkelina. Kartoituksen julkaistava versio lähetetään HAMKin julkaisukanavaan loppuraportin viimeistelyn yhteydessä. Muut tuotokset julkaistaan ensin <a href="https://github.com/hamk-uas">HAMKin GitHub-tilillä</a> ja arkistoidaan sen jälkeen Zenodoon. </p>
+      <h4 id="lr-tiivistelma-en">Public summary</h4>
+      <div lang="en">
+
+      <p> The TKI-Äly project aimed to strengthen the capacity of SMEs and research, development and innovation actors in Kanta-Häme, Finland, to use artificial intelligence. The project investigated companies’ current use of AI and their development needs, developed a virtual AI laboratory based on open technologies, and carried out eleven company pilots. The target of ten pilots was achieved.</p>
+
+      <p>The needs assessment covered all 16 companies in the participation list against a target of 20, using semi-structured interviews or descriptions of concrete use needs. There were 27 company participations in events. The assessment brought together ideas from interviews and company pilots in a thematic synthesis.  Information was collected from pilot companies, event participants and some companies that were only interviewed. The themes were daily-work assistants, internal knowledge and document work, reporting and data checks, production and measurement data analysis, sales and content creation, and agents connecting tasks across systems. Clear use cases and opportunities for experimentation supported adoption. Limited time and skills, data-protection and responsibility concerns, access to data and system integrations constrained implementation. The project’s outputs include knowledge of companies’ needs and ideas, the AI laboratory and the company pilots.</p>
+
+      <p>Feedback was positive, and companies wanted concrete examples. One participating company reported starting to use AI to build its own tools after seeing the project expert do so. The project also observed expectations of a ready-made, one-size-fits-all solution. Adoption requires companies to commit effort to development and use; the barrier remains high even when the tools are familiar. </p>
+
+      <p>The expertise and outputs are available to companies through HAMK’s AI Lab service and activities including Define. The laboratory tools are being used to build a chatbot in the CareCompanion project and will support agent and chatbot development in Tekoäly työkaverina logistiikka-alalla, starting on 1 January 2027. An article currently undergoing peer review for Pilkku describes the tools and infrastructure implementation for use on organisations’ own hardware. </p>
+
+      <p>A technical description of the AI laboratory is available as an article. The needs assessment will be submitted to a HAMK publication channel when the final report is being finalised. Other outputs will first be published in <a href="https://github.com/hamk-uas">HAMK’s GitHub account</a> and then archived in Zenodo. </p>
+
+    </div>
+      <h4 id="lr-saatavuus">Tuotosten saatavuus</h4>
+      <div class="table-wrap"><table>
+        <caption>Tuotokset ja julkaisemisen tilanne</caption>
+        <thead><tr>
+<th scope="col">Tuotos</th>
+<th scope="col">Tilanne</th>
+</tr></thead>
+        <tbody>
+          <tr>
+<th scope="row">Tekoälylaboratorion tekninen kuvaus</th>
+<td>Saatavilla artikkelin muodossa.</td>
+</tr>
+          <tr>
+<th scope="row">Kartoituksen tulokset</th>
+<td>Tuotoksen julkaistava versio lähetetään HAMKin julkaisukanavaan loppuraportin viimeistelyn yhteydessä.</td>
+</tr>
+          <tr>
+<th scope="row">Muut tuotokset, ohjelmistot ja käyttöohjeet</th>
+<td>Julkaistaan ensin <a href="https://github.com/hamk-uas">HAMKin GitHub-tilillä</a> ja arkistoidaan sen jälkeen Zenodoon.</td>
+</tr>
+          <tr>
+<th scope="row">Pilkku-artikkeli</th>
+<td>Julkaisuprosessissa; vertaisarviointi on käynnissä. Artikkeli avaa käytetyt työkalut ja infrastruktuurin toteutustavan.</td>
+</tr>
+          <tr>
+<th scope="row">Palvelu ja jatkokäyttö</th>
+<td>Toiminta jatkuu <a href="https://www.hamk.fi/palvelut/ai-lab/">HAMKin AI Lab -palveluna</a>, TKI-hankkeissa ja alueen yritysten kanssa myös Define-toiminnan kautta.</td>
+</tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="report-part" id="toteutus">
+      <h3 id="toteutus-otsikko">3.2 Hankkeen toteutus, tulokset ja vaikutukset</h3>
+      <h4 id="kohderyhma-ja-alue">Kohderyhmä ja alueellinen kohdentuminen</h4>
+      <p>Hankkeen kohderyhmänä olivat Kanta-Hämeen pk-yritykset ja TKI-toimijat. Yrityksiä tavoitettiin suorilla yhteydenotoilla, tapahtumissa ja yhteistyöverkostojen kautta. Hankkeen maantieteellinen alue ei muuttunut.</p>
+      <p>Kaikilla osallistuneilla yrityksillä on kytkös Kanta-Hämeeseen tai lähialueeseen, jossa ne työllistävät alueella asuvia. Turussa kotipaikkaansa pitävän Keskusautohallin kanssa tehty yhteistyö kohdistui Forssan toimipisteeseen. Loppuvaiheessa mukaan saatiin useampia Forssan yrityksiä, mikä vastasi alkuperäisen hankesuunnitelman alueellista kohdentumista.</p>
+
+      <h4 id="yritysten-tarpeet">Yritysten tarpeet ja kartoituksen tulokset</h4>
+      <p>Hankkeessa vastattiin tarpeeseen vahvistaa tekoälyosaamista ja mahdollistaa käytännön kokeiluja. Kartoituksen tulos oli 16/20 yritystä, ja yritysten osallistumisia kertyi 27 kpl. Tietoa kerättiin puolistrukturoiduilla haastatteluilla tai konkreettisten käyttötarpeiden kuvauksilla. Aineistoa kertyi kokeiluyrityksiltä, tapahtumiin osallistuneilta ja myös vain haastatelluilta yrityksiltä.</p>
+      <p>Haastattelujen ja kokeilujen ideakoosteessa yritysten tekoälyn käyttötavat jäsentyivät kuuteen teemaan:</p>
+      <ul>
+        <li>arjen assistentit ja asiakaspalvelu</li>
+        <li>oman tiedon hyödyntäminen ja asiakirjatyö</li>
+        <li>raportointi ja tietojen tarkastus</li>
+        <li>tuotanto- ja mittaustiedon analyysi</li>
+        <li>myynti, markkinointi ja sisällöntuotanto</li>
+        <li>agentit ja järjestelmien väliset työnkulut.</li>
+      </ul>
+      <p>Kehittämisessä korostuivat oman tiedon saatavuus, ERP-yhteydet, agenttien rakentamisen työmäärä ja sopivan työkalun valinta. Kartoituksen havaintoja päivitetään loppuraportoinnin yhteydessä, ja tuotoksen julkaistava versio lähetetään HAMKin julkaisukanavaan loppuraportin viimeistelyssä.</p>
+
+      <h4 id="kokeilut-ja-tuotokset">Yrityskokeilut ja tekoälylaboratorio</h4>
+      <p>Hankkeessa toteutettiin 11 yrityskokeilua, joten kymmenen kokeilun tavoite saavutettiin. Laboratorio yhdistää selainkäyttöliittymän paikalliseen tekoälyyn sekä tukee ohjelmallista aineistonkäsittelyä ja agenttien työnkulkuja. HAMKin tekoälylaboratorioon liittyvää infrastruktuuria käytettiin kaikissa kokeiluissa.</p>
+      <p>Konkreettisia tuotoksia ovat Juusoselle luotu kaksoistietueiden tunnistustyökalu, Kanta-Hämeen aluetaksin järjestelmien välinen tiedonsiirtotyökalu ja Annian sähköpostiyhteydenottojen käsittelytyökalu. 3DBearin käyttöön kahdennettiin tekoäly-ympäristö ja luotiin yrityksen tarpeisiin sopivia agentteja.</p>
+
+      <h4 id="palaute-ja-vaikutukset">Palaute, oppiminen ja käyttöönotto</h4>
+      <p>Palaute oli myönteistä. Yritykset toivoivat selvästi konkreettisia esimerkkejä tekoälyn hyödyntämisestä omassa työssään. Kauppavalmennus kertoi alkaneensa rakentaa tekoälyllä erilaisia työkaluja nähtyään, miten hankkeen asiantuntija teki samaa. Tämä on yrityksen raportoima muutos omassa tekemisessään.</p>
+      <p>3DBear rakentaa jo lähtökohtaisesti liiketoimintaansa tekoälyn ympärille. Hankkeen tukea olivat käyttöön kahdennettu ympäristö, agentit ja konsultointi oman ympäristön rakentamiseen.</p>
+      <p>Hankkeen havaintona tekoälyä pidettiin usein valmiina, kaikkeen sopivana työkaluna. Käytännössä kehittäminen ja käyttö edellyttävät yritysten omaa panostusta. Käyttöönoton kynnys on edelleen korkea työkalujen tuttuudesta huolimatta. Jatkossa tarvitaan käytännön esimerkkejä, ohjattua tekemistä ja yrityksen tarpeisiin sovittamista.</p>
+
+      <h4 id="tavoitteiden-toteutuminen">Tavoitteiden toteutuminen</h4>
+      <p>Laboratorion kehittäminen, yrityskohtaiset työkalut ja kokeilut muodostavat hankkeen keskeiset tuotokset. Myönteinen palaute ja yrityksen kertoma oman työkalujen rakentamisen aloittaminen tukevat arviota osaamisen ja tekemisen valmiuksien vahvistumisesta.</p>
+      <p>Yrityskokeilujen toteuma on 11/10 ja kartoituksen 16/20 yritystä. Keskeisten NO03- ja RCO04-indikaattorien toteumaksi arvioidaan kummassakin 11 yritystä yrityskohtaisten kokeilujen perusteella.</p>
+      <p>Kokeilujen määrällinen tavoite antoi selkeän päämäärän tekemiselle. Osallistujien, käyttäjäyritysten ja alustojen määrät kuvaavat toiminnan laajuutta. Palautteessa esiin tullut tekemisen muutos ja jatkokäyttö täydentävät määrällistä kuvaa hankkeen tuloksista.</p>
+
+      <h4 id="jatkokaytto">Tulosten hyödyntäminen hankkeen jälkeen</h4>
+      <p>Toiminta jatkuu HAMKin AI Lab -palveluna, TKI-hankkeissa ja alueen yritysten kanssa myös Define-toiminnan kautta. Kehitettyjä työkaluja ja toimintamalleja hyödynnetään HAMKin normaalitoiminnassa.</p>
+      <p>Laboratorion työkaluja hyödynnetään CareCompanion-hankkeessa chatbotin luomiseen. Lisäksi niitä hyödynnetään 1.1.2027 alkavassa <em>Tekoäly työkaverina logistiikka-alalla</em> -hankkeessa agenttien ja chatbottien rakentamiseen.</p>
+      <p>Infrastruktuuria voi hyödyntää myös omalla laitteistolla. Pilkku-artikkeli avaa käytetyt työkalut ja toteutustavan; artikkelin vertaisarviointi on käynnissä. Paikallisen tekoälyn laitteistosuosituksia käsiteltiin kevään työpajassa, ja esitysmateriaalit on lähetetty osallistujille.</p>
+
+      <h4 id="viestinta">Viestintä ja tulosten levittäminen</h4>
+      <p>Hankkeelle perustettiin verkkosivut ja laadittiin sähköinen juliste. Toiminnasta viestittiin HAMKin verkkosivuilla, sosiaalisessa mediassa, uutiskirjeissä ja yhteistyökumppaneiden kanavissa.</p>
+      <p>Tekoälytietoa ja tuloksia jaettiin omassa tilaisuudessa, Forssan Yrityskehityksen kanssa järjestetyissä tapahtumissa, InnoHoivaHub-yhteistilaisuudessa, kauppakamarin koulutuksessa ja FLASH-tapahtumassa. Tulosten levittämistä jatketaan Limowan <em>Tekoälyagentit logistiikan tukena</em> -tapahtumassa. Hankkeessa raportoitiin kansainvälinen vertaisarvioitu julkaisu, ja Pilkku-artikkeli on julkaisuprosessissa.</p>
+
+      <h4 id="aikataulu-ja-talous">Toteutuksen muutokset, aikataulu ja talous</h4>
+      <p>Yritysten rekrytoinnin ja osallistumisen vaikeudet, yksittäisten sovittujen kokeilujen toteutumatta jääminen sekä henkilöstöresurssien muutokset hidastivat etenemistä. Kartoitus ja kokeilut etenivät osin rinnakkain teknisen kehittämisen kanssa. Tehtäviä järjesteltiin uudelleen, ja hankeaikaa jatkettiin lokakuun 2026 loppuun.</p>
+      <p>Hanke päättyi 31.10.2026. Budjetti on käytetty eikä viimeisimmästä muutoshakemuksesta ole poikettu. Yrityskokeilujen määrällinen tavoite saavutettiin.</p>
+
+      <h4 id="julkaisu-ja-arkistointi">Tuotosten julkaiseminen ja aineiston säilyttäminen</h4>
+      <p>Tekoälylaboratorion tekninen kuvaus on saatavilla artikkelina. Kartoituksen julkaistava versio lähetetään HAMKin julkaisukanavaan loppuraportin viimeistelyn yhteydessä. Muut tuotokset julkaistaan ensin HAMKin GitHub-tilillä ja arkistoidaan sen jälkeen Zenodoon. Hankkeelle on perustettu sähköinen arkisto Dynastyyn.</p>
+
+      <h4 id="hankeyhteydet">Hankeyhteydet ja yhteistyöverkostot</h4>
+      <p>InnoHoivaHub-hankkeen kanssa järjestettiin yhteinen tekoälytilaisuus. Työkalujen jatkokäyttö CareCompanionissa ja tulevassa logistiikkahankkeessa jatkaa kehittämistä hankkeen päättymisen jälkeen.</p>
+      <p>Sixnet-yhteistyö lähti pitkälti liikkeelle hankkeen tapahtuman kautta alkaneesta yhteistyöstä Linnan Kehityksen kanssa. Muita yhteistyötahoja ovat Koulutuskuntayhtymä Tavastia, Puolustusvoimat, LUT-yliopisto, FYK, Linnan kehitys, LHKK, Keuruun kaupunki ja Limowa.</p>
+    </div>
+  </section>
+
+  <section id="mittarit">
+    <h2>4 Mittarikoonti</h2>
+    <p>Hankkeeseen osallistui 16 eri yritystä. Kokeiluyrityksiä oli 11 ja tapahtumien tai muun yhteistyön yrityksiä 12; seitsemän yritystä kuului molempiin ryhmiin. Yritysten osallistumisia kertyi 27 kpl.</p>
+    <h3 id="toiminnalliset-tavoitteet">Toiminnalliset tavoitteet</h3>
+    <div class="table-wrap"><table>
+      <thead><tr>
+<th scope="col">Tavoite</th>
+<th scope="col">Tavoitemäärä</th>
+<th scope="col">Toteuma</th>
+</tr></thead>
+      <tbody>
+        <tr>
+<th scope="row">Yrityskokeilut</th>
+<td>10</td>
+<td><strong>11 – tavoite saavutettu</strong></td>
+</tr>
+        <tr>
+<th scope="row">Puolistrukturoidut haastattelut tai konkreettisen käyttötarpeen kuvaus</th>
+<td>20 yritystä</td>
+<td><strong>16 yritystä</strong></td>
+</tr>
+        <tr>
+<th scope="row">Yritysten osallistumiset</th>
+<td>—</td>
+<td><strong>27 kpl</strong></td>
+</tr>
+      </tbody>
+    </table></div>
+    <h3 id="indikaattorikoonti">EURA-indikaattorien koonti</h3>
+    <p>Keskeisten NO03- ja RCO04-indikaattorien arvion lähtökohtana ovat hankkeen 11 yrityskohtaista kokeilua. Taulukko kuvaa indikaattorien nykytilan koontia. Lopullinen yritys- ja organisaatiokohtainen raportointikelpoisuus sekä laskentaperusteet varmistetaan rahoittajalta ennen loppuraportin jättämistä.</p>
+    <div class="table-wrap"><table class="indicator-table">
+      <thead><tr>
+<th scope="col">Indikaattori</th>
+<th scope="col">Tavoite</th>
+<th scope="col">Arvio hankkeen lopputilanteesta</th>
+</tr></thead>
+      <tbody>
+<tr>
+<th scope="row">NO03 Yhteiskehittämiseen osallistuva yritys</th>
+<td>10 yritystä</td>
+<td>
+<strong>11 yritystä</strong> yrityskohtaisten kokeilujen perusteella.</td>
+</tr>
+<tr>
+<th scope="row">RCO04 De minimis -tukea saaneet yritykset</th>
+<td>10 yritystä</td>
+<td>
+<strong>11 yritystä</strong> yrityskohtaisten kokeilujen perusteella.</td>
+</tr>
+<tr>
+<th scope="row">RCO10 Yritykset yhteistyössä tutkimuslaitosten kanssa</th>
+<td>20 yritystä</td>
+<td>12 yritystä tapahtumissa ja muussa yhteistyössä.</td>
+</tr>
+<tr>
+<th scope="row">NO02 Yhteiskehittämistä tukevat alustat ja verkostot</th>
+<td>1</td>
+<td>1 tekoälylaboratorio. Lisäksi Sixnet-yhteistyö on ehdolla mukaan verkostona.</td>
+</tr>
+<tr>
+<th scope="row">NR02 TKI-infrastruktuuria käyttävä yritys</th>
+<td>10 yritystä</td>
+<td>11 yritystä. Kaikissa kokeiluissa käytettiin HAMKin tekoälylaboratorioon liittyvää infrastruktuuria. 3DBearille kahdennettu ympäristö sisältyy tähän yritysmäärään.</td>
+</tr>
+<tr>
+<th scope="row">RCO07 Yhteiseen tutkimushankkeeseen osallistuva tutkimusorganisaatio</th>
+<td>—</td>
+<td>Organisaatiokohtaisessa koonnissa ovat Koulutuskuntayhtymä Tavastia, Puolustusvoimat, LUT-yliopisto, FYK, Linnan kehitys, LHKK, Keuruun kaupunki ja Limowa. Lopullista indikaattorilukua ei ole vielä vahvistettu.</td>
+</tr>
+<tr>
+<th scope="row">RCR01 Uudet tuella aikaansaadut työpaikat; SL01 naisten osuus</th>
+<td>—</td>
+<td>Ei vahvistettua loppulukua.</td>
+</tr>
+<tr>
+<th scope="row">NR01 Verkostojen ja innovaatioekosysteemien kehittämät innovaatiot, tuotteet ja palvelut</th>
+<td>—</td>
+<td>Ei vahvistettua loppulukua.</td>
+</tr>
+<tr>
+<th scope="row">RCR03 Tuote- tai prosessi-innovaatioita toteuttava pk-yritys</th>
+<td>—</td>
+<td>Kauppavalmennus on palautteen mukaan aloittanut tekoälyn hyödyntämisen omien työkalujen rakentamiseen. Indikaattorilukua ei ole vielä vahvistettu.</td>
+</tr>
+</tbody>
+    </table></div>
+  </section>
+  <footer>TKI-Äly · Ohjausryhmän kokous 2.11.2026 · Tilanne 31.10.2026</footer>
+</main>
+</body>
+</html>
