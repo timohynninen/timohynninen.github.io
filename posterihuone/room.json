@@ -161,8 +161,8 @@
     },
     {
       "slot": 8,
-      "title": "Posteripaikka 08",
-      "placeholder": true,
+      "title": "Kainuun sosiaalipäivystyksen ja mielenterveys- ja päihdepäivystyksen yhteistyön kehittäminen",
+      "placeholder": false,
       "position": [
         1.65,
         1.7,
@@ -171,8 +171,14 @@
       "rotation": 1.5707963267948966,
       "mount": "stand",
       "width": 0.72,
-      "height": 1.02,
-      "zoomUrl": "https://hamk.zoom.us/j/66598827302?pwd=e0OWq9qLQm9wn0h6QvsbSm9JSKx0XK.1"
+      "height": 0.54,
+      "zoomUrl": "https://hamk.zoom.us/j/66598827302?pwd=e0OWq9qLQm9wn0h6QvsbSm9JSKx0XK.1",
+      "subtitle": "Riikka Kehusmaa",
+      "description": "Kainuun sosiaalipäivystyksen ja mielenterveys- ja päihdepäivystyksen yhteistyön kehittäminen",
+      "image": "sote-08.webp",
+      "pdf": "sote-08.pdf",
+      "credit": "Riikka Kehusmaa",
+      "sourceFile": "Riikka Kehusmaa.pdf"
     },
     {
       "slot": 9,
