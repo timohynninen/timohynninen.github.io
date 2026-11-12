@@ -25,7 +25,6 @@
       "mount": "stand",
       "width": 1.15,
       "height": 0.646875,
-      "zoomUrl": "https://hamk.zoom.us/j/62749711596?pwd=ouv3q5QS74xWC9ZGC9heGD8bRkfPAg.1",
       "subtitle": "Elina Mattila",
       "description": "Työhyvinvoinnin tukeminen henkilöstösiirroissa kotihoidossa – lähijohtamisen keinot muutostilanteessa",
       "image": "sote-01.webp",
@@ -46,7 +45,6 @@
       "mount": "stand",
       "width": 0.72,
       "height": 0.9317647058823529,
-      "zoomUrl": "https://hamk.zoom.us/j/63204545479?pwd=WTgbSVaYIUAylHT8kwCqRGMKS36yal.1",
       "subtitle": "Sote-posteri",
       "description": "Sosiaali- ja terveysalan työntekijöiden psykologisen turvallisuuden lisääminen osana henkilöstöstrategiaa",
       "image": "sote-02.webp",
@@ -67,7 +65,6 @@
       "mount": "stand",
       "width": 0.72,
       "height": 0.96,
-      "zoomUrl": "https://hamk.zoom.us/j/67500049008?pwd=aoCfbIniZgklR7uq5M8OJRUKZE2cfi.1",
       "subtitle": "Tiia Bhandari ja Sanna Koski",
       "description": "Työyhteisön hyvinvoinnin tukeminen työntekijöiden vahvuuksia hyödyntämällä",
       "image": "sote-03.webp",
@@ -88,7 +85,6 @@
       "mount": "stand",
       "width": 0.72,
       "height": 1.0185255198487713,
-      "zoomUrl": "https://hamk.zoom.us/j/63442347163?pwd=2b08XlafmIplMg08CEEa9UamxbifkQ.1",
       "subtitle": "Krista Juuti ja Hanna Ristola",
       "description": "Digitaalisen asioinnin hyödyntäminen hoidon jatkuvuuden tukena perusterveydenhuollossa – toimintamallin kehittäminen",
       "image": "sote-04.webp",
@@ -109,7 +105,6 @@
       "mount": "stand",
       "width": 1.15,
       "height": 0.646875,
-      "zoomUrl": "https://hamk.zoom.us/j/63515092730?pwd=7MZbm0OKcwjakHus2Jb9C436HvrIDr.1",
       "subtitle": "Sofia Nyberg",
       "description": "Muutosmyönteisyys neuvolatyössä",
       "image": "sote-05.webp",
@@ -130,7 +125,6 @@
       "mount": "stand",
       "width": 0.72,
       "height": 1.018337531486146,
-      "zoomUrl": "https://hamk.zoom.us/j/65733844714?pwd=is9Bqv7Q8O777eNQCUtoU8iCtpsBOE.1",
       "subtitle": "Taru Piironen",
       "description": "Hoitotyön ammatillisen kielitaidon tukeminen pelillisen oppimisen avulla",
       "image": "sote-06.webp",
@@ -151,7 +145,6 @@
       "mount": "stand",
       "width": 0.72,
       "height": 1.0185255198487713,
-      "zoomUrl": "https://hamk.zoom.us/j/68662035236?pwd=NrhUalacvygqXhP4k0fdqeCzVljnnD.1",
       "subtitle": "Nita Nousiainen",
       "description": "Luontoympäristön integroiminen valtion työtiloihin",
       "image": "sote-07.webp",
@@ -172,7 +165,6 @@
       "mount": "stand",
       "width": 0.72,
       "height": 0.54,
-      "zoomUrl": "https://hamk.zoom.us/j/66598827302?pwd=e0OWq9qLQm9wn0h6QvsbSm9JSKx0XK.1",
       "subtitle": "Riikka Kehusmaa",
       "description": "Kainuun sosiaalipäivystyksen ja mielenterveys- ja päihdepäivystyksen yhteistyön kehittäminen",
       "image": "sote-08.webp",
@@ -182,8 +174,8 @@
     },
     {
       "slot": 9,
-      "title": "Posteripaikka 09",
-      "placeholder": true,
+      "title": "Lasten- ja naistentalon toimintamallin arviointi ja kehittäminen",
+      "placeholder": false,
       "position": [
         -0.8,
         1.7,
@@ -191,9 +183,14 @@
       ],
       "rotation": 1.5707963267948966,
       "mount": "stand",
-      "width": 0.72,
-      "height": 1.02,
-      "zoomUrl": "https://hamk.zoom.us/j/62988479282?pwd=gALrrKuJgR6eDTdqeiH1gm1gTsuEgJ.1"
+      "width": 1.15,
+      "height": 0.8624999999999999,
+      "subtitle": "Janette Suomalainen-Tuohiniemi",
+      "description": "Lasten- ja naistentalon toimintamallin arviointi ja kehittäminen",
+      "image": "sote-09.webp",
+      "pdf": "sote-09.pdf",
+      "credit": "Janette Suomalainen-Tuohiniemi",
+      "sourceFile": "tieteellinen posteri janette.pdf"
     },
     {
       "slot": 10,
@@ -207,8 +204,7 @@
       "rotation": 0,
       "mount": "stand",
       "width": 0.72,
-      "height": 1.02,
-      "zoomUrl": "https://hamk.zoom.us/j/66038184994?pwd=2MtXyxp8umETi1XnKeHkbG1oOrktCb.1"
+      "height": 1.02
     },
     {
       "slot": 11,
@@ -222,8 +218,7 @@
       "rotation": 0,
       "mount": "stand",
       "width": 0.72,
-      "height": 1.02,
-      "zoomUrl": "https://hamk.zoom.us/j/68630476080?pwd=yVUfJWN07lHZ26ROo512ZQJq9DSRaP.1"
+      "height": 1.02
     },
     {
       "slot": 12,
@@ -237,8 +232,7 @@
       "rotation": 0,
       "mount": "stand",
       "width": 0.72,
-      "height": 1.02,
-      "zoomUrl": "https://hamk.zoom.us/j/68003609685?pwd=OH3QgvATKJHuc8H2hDNOoMYCvDmsHP.1"
+      "height": 1.02
     }
   ]
 }
